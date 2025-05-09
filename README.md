@@ -52,6 +52,8 @@ Verify if you can access the route, either from your browser or with curl
 ```
 curl -k https://<route>
 ```
+If you are getting errors, you might want to edit your service to make sure that it uses port 3001 as the target port
+
 7. Now, if you want to challenge yourself, you can fork the repo to your own Github, edit the application (in your own repository) and restart the build, for example, change the text “Hello from Node.js Starter Application!” to something else.  
 Observe what happens. 
 After some time, the result of your curl command will have changed.
