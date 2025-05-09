@@ -25,20 +25,20 @@ Copy the files to your path
 ```
 cp oc kubectl /usr/local/bin/
 ```
-Login to the cluster, you can copy the login command from the web interface, or
+3. Login to the cluster, you can copy the login command from the web interface, or use something like this
 ```
-oc login api.<cluster>.techzone.ibm.com:6443 -u kubeadmin -p <password>
+oc login api.<instance>.techzone.ibm.com:6443 -u kubeadmin -p <password>
 ```
 
-Create your own namespace or project, using the official documentation.
+4. Create your own namespace or project, using the official documentation.
 ```
 oc new-project eric
 ```
-Deploy this application to your namespace in any way you like.
+5. Deploy this application to your namespace in any way you like.
 ```
 oc new-app https://github.com/ericbos111/nodejs-sample
 ```
-Create a Service and an Ingress or Route, using the official documentation.
+6. Create a Service and an Ingress or Route, using the official documentation.
 ```
 oc create route edge --service=nodejs-sample
 ```
@@ -52,7 +52,7 @@ Verify if you can access the route, either from your browser or with curl
 ```
 curl -k https://<route>
 ```
-Now, if you want to challenge yourself, you can fork the repo to your own Github, edit the application (in your own repository) and restart the build, for example, change the text “Hello from Node.js Starter Application!” to something else.  
+7. Now, if you want to challenge yourself, you can fork the repo to your own Github, edit the application (in your own repository) and restart the build, for example, change the text “Hello from Node.js Starter Application!” to something else.  
 Observe what happens. 
 After some time, the result of your curl command will have changed.
 
