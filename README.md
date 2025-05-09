@@ -8,20 +8,25 @@ kubectl create deployment --help
 kubectl create deployment -h
 ```
 1. The application is available on [https://github.com/ericbos111/nodejs-sample](https://github.com/ericbos111/nodejs-sample) 
-It uses port 3001.
+
+   It uses port 3001.
 
 2. Install the OpenShift cli from the OpenShift web interface > Help (the question mark)
 ![image](https://github.com/user-attachments/assets/6066b21e-f34f-4f1d-ab6c-f28d21933d3b)
 
-or from [mirror.openshift.com](mirror.openshift.com), choose the same version as the cluster version. What I usually do is copy the link, and then from my terminal window, fetch this link with curl:
+   or from [mirror.openshift.com](mirror.openshift.com), choose the same version as the cluster version. What I usually do is copy the link, and then from my terminal window, fetch this link with curl:
 ```
 curl -lO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.18.9/openshift-client-linux-amd64-rhel9-4.18.9.tar.gz
 ```
- Decompress the file with tar xvf
+
+   Decompress the file with tar xvf
+   
 ```
 tar xvf https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.18.9/openshift-client-linux-amd64-rhel9-4.18.9.tar.gz
 ```
-Copy the files to your path
+
+   Copy the files to your path
+   
 ```
 cp oc kubectl /usr/local/bin/
 ```
@@ -43,20 +48,21 @@ oc new-app https://github.com/ericbos111/nodejs-sample
 oc create route edge --service=nodejs-sample
 ```
 	
-Get the Ingress or Route, using the official documentation.
+   Get the Ingress or Route, using the official documentation.
+   
 ```
 oc get route
 ```
 
-Verify if you can access the route, either from your browser or with curl
+   Verify if you can access the route, either from your browser or with curl
+   
 ```
 curl -k https://<route>
 ```
-If you are getting errors, you might want to edit your service to make sure that it uses port 3001 as the target port
 
-7. Now, if you want to challenge yourself, you can fork the repo to your own Github, edit the application (in your own repository) and restart the build, for example, change the text “Hello from Node.js Starter Application!” to something else.  
-Observe what happens. 
-After some time, the result of your curl command will have changed.
+   If you are getting errors, you might want to edit your service to make sure that it uses port 3001 as the target port
+
+7. Now, if you want to challenge yourself, you can fork the repo to your own Github, edit the application (in your own repository) and restart the build, for example, change the text “Hello from Node.js Starter Application!” to something else. Observe what happens. After some time, the result of your curl command will have changed.
 
 
 
