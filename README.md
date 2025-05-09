@@ -11,7 +11,8 @@ kubectl create deployment -h
 It uses port 3001.
 
 2. Install the OpenShift cli from the OpenShift web interface > Help (the question mark)
-![image](https://github.com/user-attachments/assets/59401092-7c33-4201-a8d1-ac00def3a9e0)
+![image](https://github.com/user-attachments/assets/6066b21e-f34f-4f1d-ab6c-f28d21933d3b)
+
 or from [mirror.openshift.com](mirror.openshift.com), choose the same version as the cluster version. What I usually do is copy the link, and then from my terminal window, fetch this link with curl:
 ```
 curl -lO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.18.9/openshift-client-linux-amd64-rhel9-4.18.9.tar.gz
@@ -61,9 +62,7 @@ After some time, the result of your curl command will have changed.
 
 
 
-# Creating an application with a Node.js code sample
-
-**Note:** The Node.js code sample uses the **3001** HTTP port.
+# Relationship between 'devfile' and 'Dockerfile'
 
 Before you begin creating an application with this `devfile` code sample, it's helpful to understand the relationship between the `devfile` and `Dockerfile` and how they contribute to your build. You can find these files at the following URLs:
 
