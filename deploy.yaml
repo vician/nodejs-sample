@@ -36,3 +36,21 @@ spec:
       targetPort: 3001
   selector:
     app: nodejs-app
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  name: my-nodejs-route
+spec:
+  port:
+    targetPort: http-3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: my-nodejs-svc
+    weight: 100
+  wildcardPolicy: None
