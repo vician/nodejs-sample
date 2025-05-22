@@ -4,7 +4,6 @@ metadata:
   annotations:
     openshift.io/host.generated: "true"
   name: my-nodejs-route
-  namespace: eric
 spec:
   host: my-nodejs-eric.apps.ericbos3.cp.fyre.ibm.com
   port:
