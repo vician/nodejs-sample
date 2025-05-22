@@ -5,7 +5,6 @@ metadata:
     openshift.io/host.generated: "true"
   name: my-nodejs-route
 spec:
-  host: my-nodejs-eric.apps.ericbos3.cp.fyre.ibm.com
   port:
     targetPort: http-3001
   tls:
